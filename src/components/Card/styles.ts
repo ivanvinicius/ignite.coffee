@@ -9,7 +9,9 @@ export const CardContainer = styled('div', {
   width: '256px',
   height: '310px',
   borderRadius: '$6 $36 $6 $36',
-  background: '$card'
+  background: '$card',
+  scrollSnapAlign: 'start',
+  scrollSnapStop: 'normal'
 })
 
 export const CupImage = styled('img', {

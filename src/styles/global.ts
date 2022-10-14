@@ -31,5 +31,24 @@ export const globalStyles = globalCss({
     '@tablet': {
       fontSize: '87.5%'
     }
+  },
+
+  '.hScrollbar': {
+    '&::-webkit-scrollbar': {
+      height: '0.5rem',
+      background: '$card',
+      borderRadius: '$full'
+    },
+
+    '&::-webkit-scrollbar-thumb': {
+      background: '$yellowLight',
+      borderRadius: '$full'
+    },
+
+    '@tablet': {
+      '&::-webkit-scrollbar': {
+        display: 'none'
+      }
+    }
   }
 })

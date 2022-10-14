@@ -1,8 +1,6 @@
 import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
 
-import { cups } from '../../utils/cups'
-
 import { ExtraBadge } from './ExtraBadge'
 import {
   CardContainer,
@@ -15,40 +13,49 @@ import {
   Cart
 } from './styles'
 
-export function Card() {
-  const cup = cups[8]
+interface Props {
+  data: {
+    id: string
+    image: string
+    title: string
+    description: string
+    price: number
+    extras: string[]
+  }
+}
 
-  const price = new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL'
-  })
-    .format(cup.price)
-    .replace('R$', '')
-
+export function Card({ data }: Props) {
   return (
-    <CardContainer title={cup.title}>
-      <CupImage src={cup.image} alt={cup.title} />
+    <CardContainer title={data.title}>
+      <CupImage src={data.image} alt={data.title} />
       <ExtraBadgesContainer>
-        {cup.extras.map((extra) => (
+        {data.extras.map((extra) => (
           <ExtraBadge key={extra} description={extra} />
         ))}
       </ExtraBadgesContainer>
       <Infos>
-        <strong>{cup.title}</strong>
-        <span>{cup.description}</span>
+        <strong>{data.title}</strong>
+        <span>{data.description}</span>
       </Infos>
 
       <BuyInfos>
         <Price>
           <span>R$</span>
-          <strong>{price}</strong>
+          <strong>
+            {new Intl.NumberFormat('pt-BR', {
+              style: 'currency',
+              currency: 'BRL'
+            })
+              .format(data.price)
+              .replace('R$', '')}
+          </strong>
         </Price>
 
         <CartActions>
           <button title="Remover uma unidade do carrinho">
             <Minus size={14} weight="fill" />
           </button>
-          <span>5</span>
+          <span>0</span>
           <button title="Adicionar uma unidade ao carrinho">
             <Plus size={14} weight="fill" />
           </button>

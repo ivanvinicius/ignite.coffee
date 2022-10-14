@@ -7,7 +7,11 @@ export const Billboard = styled('div', {
   minHeight: '544px',
   backgroundImage: `url(${Background})`,
   backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center'
+  backgroundPosition: 'center',
+
+  '@tablet': {
+    padding: '$64 0'
+  }
 })
 
 export const Brand = styled('div', {
@@ -61,6 +65,7 @@ export const Badges = styled('div', {
 export const CafesContainer = styled('div', {
   marginTop: '$32',
   display: 'flex',
+  padding: '0 0 0 $16',
 
   h3: {
     fontSize: '$32',
@@ -68,33 +73,18 @@ export const CafesContainer = styled('div', {
     fontWeight: '$900',
     color: '$subtitle',
     lineHeight: '$130'
+  },
+
+  '@tablet': {
+    padding: '0'
   }
 })
 
 export const List = styled('div', {
-  marginTop: 'calc($32 + 20px)',
+  marginTop: '20px',
   width: '100%',
-  maxWidth: '1120px',
-  display: 'flex',
-  gap: '$32',
-  overflowX: 'auto',
-  padding: '$32 0',
-  borderRadius: '$6',
-
-  '&::-webkit-scrollbar': {
-    height: '0.5rem',
-    background: '$card',
-    borderRadius: '$full'
-  },
-
-  '&::-webkit-scrollbar-thumb': {
-    background: '$purpleLight',
-    borderRadius: '$full'
-  },
 
   '@tablet': {
-    '&::-webkit-scrollbar': {
-      display: 'none'
-    }
+    width: '105.4%'
   }
 })

@@ -8,7 +8,11 @@ export const Nav = styled('nav', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  padding: '$32 $16'
+  padding: '$32 $16',
+
+  '@tablet': {
+    padding: '$32 0'
+  }
 })
 
 export const Info = styled('div', {
