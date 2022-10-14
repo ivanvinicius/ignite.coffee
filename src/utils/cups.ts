@@ -15,12 +15,7 @@ export const cups = [
     title: 'Expresso Tradicional',
     description: 'O tradicional café feito com água quente e grãos moídos',
     price: 15.3,
-    extras: {
-      special: false,
-      milk: true,
-      alcoholic: true,
-      iced: false
-    }
+    extras: ['Com leite', 'Alcoólico']
   },
   {
     id: '64056beb',
@@ -28,12 +23,7 @@ export const cups = [
     title: 'Expresso Americano',
     description: 'Expresso diluído, menos intenso que o tradicional',
     price: 19.98,
-    extras: {
-      special: false,
-      milk: true,
-      alcoholic: false,
-      iced: false
-    }
+    extras: ['Com leite', 'Gelado']
   },
   {
     id: '64056bec',
@@ -41,12 +31,7 @@ export const cups = [
     title: 'Expresso Cremoso',
     description: 'Café expresso tradicional com espuma cremosa',
     price: 9.95,
-    extras: {
-      special: true,
-      milk: true,
-      alcoholic: false,
-      iced: false
-    }
+    extras: ['Especial', 'Com leite']
   },
   {
     id: '64056bed',
@@ -54,12 +39,7 @@ export const cups = [
     title: 'Expresso Gelado',
     description: 'Bebida preparada com café expresso e cubos de gelo',
     price: 13.2,
-    extras: {
-      special: false,
-      milk: true,
-      alcoholic: false,
-      iced: true
-    }
+    extras: ['Com leite', 'Gelado']
   },
   {
     id: '64056bee',
@@ -67,12 +47,7 @@ export const cups = [
     title: 'Café com Leite',
     description: 'Meio a meio de expresso tradicional com leite vaporizado',
     price: 9.82,
-    extras: {
-      special: false,
-      milk: true,
-      alcoholic: false,
-      iced: false
-    }
+    extras: ['Com leite']
   },
   {
     id: '64056bef',
@@ -81,12 +56,7 @@ export const cups = [
     description:
       'Uma dose de café expresso com o dobro de leite e espuma cremosa',
     price: 8.9,
-    extras: {
-      special: true,
-      milk: true,
-      alcoholic: false,
-      iced: false
-    }
+    extras: ['Especial', 'Com leite']
   },
   {
     id: '64056beg',
@@ -95,12 +65,7 @@ export const cups = [
     description:
       'Bebida com canela feita de doses iguais de café, leite e espuma',
     price: 10,
-    extras: {
-      special: false,
-      milk: true,
-      alcoholic: true,
-      iced: true
-    }
+    extras: ['Com leite', 'Alcoólico', 'Gelado']
   },
   {
     id: '64056beh',
@@ -109,12 +74,7 @@ export const cups = [
     description:
       'Café expresso misturado com um pouco de leite quente e espuma',
     price: 7.95,
-    extras: {
-      special: true,
-      milk: false,
-      alcoholic: false,
-      iced: false
-    }
+    extras: ['Especial']
   },
   {
     id: '64056bei',
@@ -122,11 +82,6 @@ export const cups = [
     title: 'Mocaccino',
     description: 'Café expresso com calda de chocolate, pouco leite e espuma',
     price: 10,
-    extras: {
-      special: true,
-      milk: false,
-      alcoholic: false,
-      iced: false
-    }
+    extras: ['Especial', 'Alcoólico', ' Gelado']
   }
 ]

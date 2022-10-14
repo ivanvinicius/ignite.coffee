@@ -1,14 +1,13 @@
 import { styled } from '../../styles/theme'
 import Background from '../../assets/background.svg'
 
-export const DashboardContainer = styled('main', {
+export const Billboard = styled('div', {
+  padding: '$64 $16',
   width: '100%',
   minHeight: '544px',
   backgroundImage: `url(${Background})`,
   backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center',
-
-  padding: '$64 $16'
+  backgroundPosition: 'center'
 })
 
 export const Brand = styled('div', {
@@ -56,5 +55,46 @@ export const Badges = styled('div', {
     marginTop: '$32',
     display: 'flex',
     flexDirection: 'column'
+  }
+})
+
+export const CafesContainer = styled('div', {
+  marginTop: '$32',
+  display: 'flex',
+
+  h3: {
+    fontSize: '$32',
+    fontFamily: '$nunito',
+    fontWeight: '$900',
+    color: '$subtitle',
+    lineHeight: '$130'
+  }
+})
+
+export const List = styled('div', {
+  marginTop: 'calc($32 + 20px)',
+  width: '100%',
+  maxWidth: '1120px',
+  display: 'flex',
+  gap: '$32',
+  overflowX: 'auto',
+  padding: '$32 0',
+  borderRadius: '$6',
+
+  '&::-webkit-scrollbar': {
+    height: '0.5rem',
+    background: '$card',
+    borderRadius: '$full'
+  },
+
+  '&::-webkit-scrollbar-thumb': {
+    background: '$purpleLight',
+    borderRadius: '$full'
+  },
+
+  '@tablet': {
+    '&::-webkit-scrollbar': {
+      display: 'none'
+    }
   }
 })
