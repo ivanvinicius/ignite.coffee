@@ -2,13 +2,13 @@ import { createStitches } from '@stitches/react'
 
 export const { styled, globalCss } = createStitches({
   media: {
-    tablet: '(max-width: 768px)'
+    tablet: '(max-width: 980px)'
   },
 
   theme: {
     fonts: {
       roboto: 'Roboto, sans-serif',
-      baloo: 'Baloo 2, cursive'
+      nunito: 'Nunito, sans-serif'
     },
 
     fontSizes: {
@@ -26,7 +26,7 @@ export const { styled, globalCss } = createStitches({
     fontWeights: {
       400: 400,
       700: 700,
-      800: 800
+      900: 900
     },
 
     lineHeights: {
@@ -68,7 +68,8 @@ export const { styled, globalCss } = createStitches({
 
     radii: {
       6: '6px',
-      36: '36px'
+      36: '36px',
+      full: '999px'
     }
   }
 })

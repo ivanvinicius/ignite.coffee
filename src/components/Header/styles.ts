@@ -1,15 +1,14 @@
 import { styled } from '../../styles/theme'
 
 export const HeaderContainer = styled('header', {
-  width: '100%',
-  borderBottom: '1px solid $card'
+  width: '100%'
 })
 
 export const Nav = styled('nav', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  padding: '$32 0'
+  padding: '$32 $16'
 })
 
 export const Info = styled('div', {
@@ -34,6 +33,8 @@ export const Location = styled('div', {
 })
 
 export const Cart = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
   padding: '$8',
   border: 'none',
   borderRadius: '$6',

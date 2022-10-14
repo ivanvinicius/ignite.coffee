@@ -14,18 +14,17 @@ export const globalStyles = globalCss({
   },
 
   body: {
-    width: '100%',
+    width: '100vw',
     minHeight: '100vh',
-    WebkitFontSmoothing: 'antialiased',
+    color: '$text',
     backgroundColor: '$background',
-    color: '$text'
+    WebkitFontSmoothing: 'antialiased'
   },
 
   'body, input, button, textarea': {
     fontFamily: '$roboto',
     fontWeight: '$400',
-    fontSize: '$16',
-    lineHeight: '0'
+    fontSize: '$16'
   },
 
   html: {
