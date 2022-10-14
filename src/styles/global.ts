@@ -9,16 +9,13 @@ export const globalStyles = globalCss({
 
   ':focus': {
     outline: 'transparent',
-    boxShadow: '0 0 0 2px #C47F17'
-  },
-
-  html: {
-    '@tablet': {
-      fontSize: '87.5%'
-    }
+    boxShadow: '0 0 0 2px #C47F17',
+    borderRadius: '$6'
   },
 
   body: {
+    width: '100%',
+    minHeight: '100vh',
     WebkitFontSmoothing: 'antialiased',
     backgroundColor: '$background',
     color: '$text'
@@ -26,7 +23,14 @@ export const globalStyles = globalCss({
 
   'body, input, button, textarea': {
     fontFamily: '$roboto',
+    fontWeight: '$400',
     fontSize: '$16',
-    fontWeight: '$regular'
+    lineHeight: '0'
+  },
+
+  html: {
+    '@tablet': {
+      fontSize: '87.5%'
+    }
   }
 })

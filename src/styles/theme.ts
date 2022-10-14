@@ -24,9 +24,9 @@ export const { styled, globalCss } = createStitches({
     },
 
     fontWeights: {
-      regular: 400,
-      bold: 700,
-      extra: 800
+      400: 400,
+      700: 700,
+      800: 800
     },
 
     lineHeights: {

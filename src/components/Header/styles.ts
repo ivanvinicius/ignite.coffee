@@ -33,7 +33,7 @@ export const Location = styled('div', {
   }
 })
 
-export const ShoppingCart = styled('div', {
+export const Cart = styled('div', {
   padding: '$8',
   border: 'none',
   borderRadius: '$6',
