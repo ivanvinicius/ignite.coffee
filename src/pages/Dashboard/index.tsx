@@ -2,7 +2,8 @@ import { ShoppingCart, Timer, Package, Coffee } from 'phosphor-react'
 
 import Banner from '../../assets/banner.svg'
 import { LayoutGrid } from '../../components/LayoutGrid'
-import { Flat } from '../../components/List/Flat'
+// import { Flat } from '../../components/List/Flat'
+import { Scaled } from '../../components/List/Scaled'
 import { Card } from '../../components/Card'
 import { cups } from '../../utils/cups'
 
@@ -63,11 +64,17 @@ export function Dashboard() {
           <h3>Nossos Cafés</h3>
 
           <List>
-            <Flat>
+            <Scaled listLenght={cups.length}>
               {cups.map((cup) => (
                 <Card key={cup.id} data={cup} />
               ))}
-            </Flat>
+            </Scaled>
+
+            {/* <Flat>
+              {cups.map((cup) => (
+                <Card key={cup.id} data={cup} />
+              ))}
+            </Flat> */}
           </List>
         </LayoutGrid>
       </CafesContainer>

@@ -21,7 +21,7 @@ export function Header() {
           <Info>
             <Location>
               <MapPin size={22} weight="fill" />
-              <span>Porto Alegre, RS</span>
+              <span>Pouso Redondo, SC</span>
             </Location>
 
             <NavLink to="/checkout" title="Ir para o carrinho">
