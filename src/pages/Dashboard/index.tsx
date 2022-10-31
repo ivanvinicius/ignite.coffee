@@ -2,10 +2,11 @@ import { ShoppingCart, Timer, Package, Coffee } from 'phosphor-react'
 
 import Banner from '../../assets/banner.svg'
 import { LayoutGrid } from '../../components/LayoutGrid'
-// import { Flat } from '../../components/List/Flat'
+import { Flat } from '../../components/List/Flat'
 import { Scaled } from '../../components/List/Scaled'
 import { Card } from '../../components/Card'
 import { cups } from '../../utils/cups'
+import { useMatchMedia } from '../../hooks/useMatchMedia'
 
 import { Badge } from './components/Badge'
 import {
@@ -18,6 +19,8 @@ import {
 } from './styles'
 
 export function Dashboard() {
+  const isMobile = useMatchMedia({ type: 'max', width: 980 })
+
   return (
     <main>
       <Billboard>
@@ -64,17 +67,19 @@ export function Dashboard() {
           <h3>Nossos Cafés</h3>
 
           <List>
-            <Scaled listLenght={cups.length}>
-              {cups.map((cup) => (
-                <Card key={cup.id} data={cup} />
-              ))}
-            </Scaled>
-
-            {/* <Flat>
-              {cups.map((cup) => (
-                <Card key={cup.id} data={cup} />
-              ))}
-            </Flat> */}
+            {isMobile ? (
+              <Flat>
+                {cups.map((cup) => (
+                  <Card key={cup.id} data={cup} />
+                ))}
+              </Flat>
+            ) : (
+              <Scaled listLenght={cups.length}>
+                {cups.map((cup) => (
+                  <Card key={cup.id} data={cup} />
+                ))}
+              </Scaled>
+            )}
           </List>
         </LayoutGrid>
       </CafesContainer>

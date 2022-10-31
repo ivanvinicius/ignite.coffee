@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { DefaultLayout } from './layouts/DefaultLayout'
 import { Dashboard } from './pages/Dashboard'
+import { Checkout } from './pages/checkout'
 
 export function Router() {
   return (
@@ -9,6 +10,7 @@ export function Router() {
       <Routes>
         <Route path="/" element={<DefaultLayout />}>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Route>
       </Routes>
     </BrowserRouter>
