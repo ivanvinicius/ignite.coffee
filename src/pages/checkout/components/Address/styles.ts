@@ -41,12 +41,12 @@ export const Grid = styled('div', {
   gridTemplateColumns: '1fr 2fr 60px',
   gridTemplateRows: 'repeat(4, 1fr)',
   gridTemplateAreas:
-    "'cep none none'" +
+    "'zipCode none none'" +
     "'street street street'" +
     "'number complement complement'" +
     "'district city uf'",
 
-  '#cep': { gridArea: 'cep' },
+  '#zipCode': { gridArea: 'zipCode' },
   '#street': { gridArea: 'street' },
   '#number': { gridArea: 'number' },
   '#complement': { gridArea: 'complement' },

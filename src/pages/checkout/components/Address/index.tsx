@@ -1,6 +1,8 @@
 import { MapPinLine } from 'phosphor-react'
 
-import { Input } from '../../../../components/Input'
+import { ZipCodeInput } from '../../../../components/Inputs/ZipCodeInput'
+import { DefaultInput } from '../../../../components/Inputs/DefaultInput'
+import { UFInput } from '../../../../components/Inputs/UFInput'
 
 import { AddressContainer, Heading, Grid } from './styles'
 
@@ -16,13 +18,38 @@ export function Address() {
       </Heading>
 
       <Grid>
-        <Input placeholder="CEP" gridArea="cep" type="number" />
-        <Input placeholder="Rua" gridArea="street" />
-        <Input placeholder="Número" gridArea="number" type="number" />
-        <Input placeholder="Complemento (opcional)" gridArea="complement" />
-        <Input placeholder="Bairro" gridArea="district" />
-        <Input placeholder="Cidade" gridArea="city" />
-        <Input placeholder="UF" gridArea="uf" maxLength={2} />
+        <ZipCodeInput
+          name="zipCode"
+          hasGridArea
+          placeholder="CEP"
+          title="CEP deve conter 8 números"
+        />
+
+        <DefaultInput name="street" hasGridArea placeholder="Rua" />
+
+        <DefaultInput
+          name="number"
+          hasGridArea
+          type="number"
+          placeholder="Número"
+        />
+
+        <DefaultInput
+          name="complement"
+          hasGridArea
+          placeholder="Complemento (opcinal)"
+        />
+
+        <DefaultInput name="district" hasGridArea placeholder="Bairro" />
+
+        <DefaultInput name="city" hasGridArea placeholder="Cidade" />
+
+        <UFInput
+          name="uf"
+          hasGridArea
+          placeholder="UF"
+          title="UF deve conter a sígla do estado como SP/RJ"
+        />
       </Grid>
     </AddressContainer>
   )

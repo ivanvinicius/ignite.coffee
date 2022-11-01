@@ -1,6 +1,6 @@
 import { styled } from '../../../../styles/theme'
 
-export const PayMethodContainer = styled('section', {
+export const PaymentContainer = styled('section', {
   marginTop: '$12',
   width: '100%',
   maxWidth: '640px',
@@ -40,8 +40,6 @@ export const OptionToPay = styled('div', {
 })
 
 export const PayLike = styled('div', {
-  padding: '$16',
-  gap: '$12',
   backgroundColor: '$button',
   borderRadius: '$6',
   boxShadow: '0 0 0 2px #E6E5E5',
@@ -60,6 +58,7 @@ export const PayLike = styled('div', {
   },
 
   label: {
+    padding: '$16',
     cursor: 'inherit',
     display: 'flex',
     gap: '$12',

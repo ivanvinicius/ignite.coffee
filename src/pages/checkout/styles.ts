@@ -1,6 +1,6 @@
 import { styled } from '../../styles/theme'
 
-export const FormContainer = styled('form', {
+export const Form = styled('form', {
   marginTop: '$40'
 })
 
